@@ -12,6 +12,10 @@
   </thead>
   <tbody>
 <?php
+$conn = new mysqli('hostname', 'username', 'password', 'database');
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
 $query = "SELECT swimmer_id, swimmer_name, swimmer_age, swimmer_gender FROM swimmers";
 $swimmers = $conn->query($query);
 while ($swimmer = $swimmers->fetch_assoc()) {
