@@ -9,7 +9,7 @@ while ($swimmer = $swimmers->fetch_assoc()) {
           <p class="card-text">
           <ul class="list-group">
 <?php
-  $courses = selectMeetsBySwimmer($swimmer['swimmer_id']);
+  $meets = selectMeetsBySwimmer($swimmer['swimmer_id']);
   while ($meet = $meets->fetch_assoc()) {
 ?>
     <li class="list-group-item"><?php echo $meet['meet_name']; ?> - <?php echo $meet['meet_location']; ?> - <?php echo $meet['meet_daytime']; ?></li>
