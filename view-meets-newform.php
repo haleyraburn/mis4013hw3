@@ -27,7 +27,7 @@
               <input type="text" class="form-control" id="mDayTime" name="mDayTime">
             </div>
             <button type="submit" class="btn btn-primary">Save</button>
-          </form>
+        </form>
       </div>
     </div>
   </div>
