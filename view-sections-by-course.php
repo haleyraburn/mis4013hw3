@@ -13,7 +13,8 @@
     </thead>
 <tbody>
   <?php
-while ($section = $sections->fetch_assoc()) {
+if (isset($sections) && $sections) {
+  while ($section = $sections->fetch_assoc()) {
   ?>
   <tr>
     <td><?php echo $section['course_id']; ?></td>
@@ -24,6 +25,9 @@ while ($section = $sections->fetch_assoc()) {
     <td><?php echo $section['day_time']; ?></td>
   </tr>
 <?php
+}
+} else {
+  echo "<tr><td colspan='6'>No sections found.</td></tr>";
 }
 ?>
     </tbody>
