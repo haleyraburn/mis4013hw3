@@ -1,8 +1,8 @@
 <?php
-function selectInstructors() {
+function selectSwimmers() {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("SELECT instructor_id, instructor_name, office_number FROM instructor");
+        $stmt = $conn->prepare("SELECT swimmer_id, swimmer_name, swimmer_age, swimmer_gender FROM swimmer");
         $stmt->execute();
         $result = $stmt->get_result();
         $conn->close();
@@ -13,10 +13,10 @@ function selectInstructors() {
     }
 }
 
-function selectCoursesByInstructor($iid) {
+function selectMeetsBySwimmer($iid) {
   try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("SELECT c.course_id, course_number, course_description, semester, room, day_time FROM course c join section s on s.course_id = c.course_id where s.instructor_id=?");
+        $stmt = $conn->prepare("SELECT m.meet_id, meet_name, meet_location, meet_daytime FROM meet m join event e on e.meet_id = m.meet_id where e.swimmer_id=?");
         $stmt->bind_param("i", $iid);
         $stmt->execute();
         $result = $stmt->get_result();
