@@ -6,7 +6,6 @@
     <th>ID</th>
     <th>Name</th>
     <th>Office</th>
-      <th></th>
     </tr>
   </thead>
   <tbody>
