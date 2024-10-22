@@ -1,8 +1,8 @@
 <?php
-function selectCourses() {
+function selectMeets() {
   try {
     $conn = get_db_connection();
-  $stmt = $conn->prepare("SELECT course_id, course_number, course_description FROM course");
+  $stmt = $conn->prepare("SELECT meet_id, meet_name, meet_location, meet_daytime FROM meet");
   $stmt->execute();
   $result = $stmt->get_result();
   $conn->close();
