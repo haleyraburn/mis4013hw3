@@ -1,4 +1,4 @@
-<h1>Courses by Instructor</h1>h1
+<h1>Courses by Instructor</h1>
 <div class="table-responsive">
   <table class="table">
     <thead>
