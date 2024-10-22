@@ -2,7 +2,7 @@
   <div class="col">
 <h1>Meets</h1>
   </div>
-  <div class="col auto">
+  <div class="col-auto">
 <?php
   include "view-meets-newform.php";
 ?>
