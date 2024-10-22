@@ -16,15 +16,15 @@
         <form method="post" action="">
             <div class="mb-3">
               <label for="mName" class="form-label">Meet name</label>
-              <input type="email" class="form-control" id="mName" name="mName">
+              <input type="text" class="form-control" id="mName" name="mName">
             </div>
             <div class="mb-3">
               <label for="mLocation" class="form-label">Meet location</label>
-              <input type="email" class="form-control" id="mLocation" name="mLocation">
+              <input type="text" class="form-control" id="mLocation" name="mLocation">
             </div>
             <div class="mb-3">
               <label for="mDayTime" class="form-label">Meet day and time</label>
-              <input type="email" class="form-control" id="mDayTime" name="mDayTime">
+              <input type="text" class="form-control" id="mDayTime" name="mDayTime">
             </div>
             <button type="submit" class="btn btn-primary">Save</button>
           </form>
