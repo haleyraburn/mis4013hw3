@@ -12,6 +12,9 @@
   </thead>
   <tbody>
 <?php
+if (!$swimmers) {
+    die("Query failed: " . $conn->error);
+}
 while ($swimmer = $swimmers->fetch_assoc()) {
   ?>
     <tr>
