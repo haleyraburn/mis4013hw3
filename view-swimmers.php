@@ -12,9 +12,8 @@
   </thead>
   <tbody>
 <?php
-if (!$swimmers) {
-    die("Query failed: " . $conn->error);
-}
+$query = "SELECT swimmer_id, swimmer_name, swimmer_age, swimmer_gender FROM swimmers";
+$swimmers = $conn->query($query);
 while ($swimmer = $swimmers->fetch_assoc()) {
   ?>
     <tr>
