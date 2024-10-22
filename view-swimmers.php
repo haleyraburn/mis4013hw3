@@ -12,9 +12,12 @@
   </thead>
   <tbody>
 <?php
-$conn = new mysqli('hostname', 'username', 'password', 'database');
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+function get_db_connection(){
+    $conn = new mysqli('138.197.17.168', 'misoucr3_hw3user', 'pXcbd0ZC)8kK', 'misoucr3_mis4013hw3');
+    if ($conn->connect_error) {
+      return false;
+    }
+    return $conn;
 }
 $query = "SELECT swimmer_id, swimmer_name, swimmer_age, swimmer_gender FROM swimmers";
 $swimmers = $conn->query($query);
