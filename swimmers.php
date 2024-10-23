@@ -15,7 +15,7 @@ if (isset($_POST['actionType'])) {
       }
     break;
     case "Delete":
-      if (insertSwimmer($_POST['sid'])) {
+      if (deleteSwimmer($_POST['sid'])) {
         echo '<div class="alert alert-success" role="alert">Swimmer deleted.</div>';
       } else {
         echo '<div class="alert alert-danger" role="alert">Error.</div>';
