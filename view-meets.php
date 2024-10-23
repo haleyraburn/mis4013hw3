@@ -29,6 +29,10 @@ while ($meet = $meets->fetch_assoc()) {
     <td><?php echo $meet['meet_name']; ?></td>
     <td><?php echo $meet['meet_location']; ?></td>
     <td>
+<?php
+include "view-meets-editform.php";
+?>
+  </div>
     </td>
     <td>
       <form method="post" action="">
