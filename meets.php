@@ -8,7 +8,7 @@ include "view-header.php";
 if (isset($_POST['actionType'])) {
   switch ($_POST['actionType']) {
     case "Add":
-      insertMeets($_POST['mName'], $_POST['mLocation'], $_POST['mDayTime']);
+      insertMeet($_POST['mName'], $_POST['mLocation'], $_POST['mDayTime']);
     break;
   }
 }
