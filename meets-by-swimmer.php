@@ -4,7 +4,7 @@ require_once("model-meets-by-swimmer.php");
 
 $pageTitle = "Meets by Swimmer";
 include "view-header.php";
-$meets = selectMeetsBySwimmer($_GET['mid']);
+$meets = selectMeetsBySwimmer($_GET['sid']);
 include "view-meets-by-swimmer.php";
 include "view-footer.php";
 ?>
