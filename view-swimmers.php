@@ -33,7 +33,6 @@ while ($swimmer = $swimmers->fetch_assoc()) {
       <td>
       </td>
       <td>
-      <td>
         <form method="post" action="">
           <input type="hidden" name"sid" value="<?php echo $swimmer['swimmer_id']; ?>">
           <input type="hidden" name="actionType" value="Delete">
@@ -43,6 +42,12 @@ while ($swimmer = $swimmers->fetch_assoc()) {
         </svg>
         </button>
         </form>
+    </td>
+    <td>
+      <form method="post" action="meets-by-swimmer.php">
+        <input type="hidden" name="sid" value=<?php echo $swimmer['swimmer_id']; ?>'>
+        <button type="submit class="btn btn-primary">Swimmers</button>
+      </form>
     </td>
   </tr>
 <?php
