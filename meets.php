@@ -14,6 +14,13 @@ if (isset($_POST['actionType'])) {
         echo '<div class="alert alert-danger" role="alert"> Error. </div>';
       }
     break;
+        case "Edit":
+      if (updateMeet($_POST['mName'], $_POST['mLocation'], $_POST['mDayTime'], $_POST['mid'])) {
+        echo '<div class="alert alert-success" role="alert"> Meet edited. </div>';
+      } else {
+        echo '<div class="alert alert-danger" role="alert"> Error. </div>';
+      }
+    break;
         case "Delete":
       if (deletedMeet($_POST['mid'])) {
         echo '<div class="alert alert-success" role="alert"> Meet deleted. </div>';
