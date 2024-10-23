@@ -13,6 +13,34 @@ function selectSwimmers() {
     }
 }
 
+function selectSwimmersForInput() {
+    try {
+        $conn = get_db_connection();
+        $stmt = $conn->prepare("SELECT swimmer_id, swimmer_name FROM swimmer ORDER BY swimmer_name");
+        $stmt->execute();
+        $result = $stmt->get_result();
+        $conn->close();
+        return $result;
+    } catch (Exception $e) {
+        $conn->close();
+        throw $e;
+    }
+}
+
+function selectMeetsForInput() {
+    try {
+        $conn = get_db_connection();
+        $stmt = $conn->prepare("SELECT meet_id, meet_name FROM meet ORDER BY meet_name");
+        $stmt->execute();
+        $result = $stmt->get_result();
+        $conn->close();
+        return $result;
+    } catch (Exception $e) {
+        $conn->close();
+        throw $e;
+    }
+}
+
 function insertSwimmer($sName, $sAge, $sGender) {
     try {
         $conn = get_db_connection();
