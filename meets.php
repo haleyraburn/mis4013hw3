@@ -15,7 +15,7 @@ if (isset($_POST['actionType'])) {
       }
     break;
         case "Delete":
-      if (deleteMeet($_POST['mName'])) {
+      if (deletedMeet($_POST['mName'])) {
         echo '<div class="alert alert-success" role="alert"> Meet deleted. </div>';
       } else {
         echo '<div class="alert alert-danger" role="alert"> Error. </div>';
