@@ -17,8 +17,11 @@
       <div class="modal-body">
       <form method="post" action="">
         <div class="mb-3">
-          <label for="sName" class="form-label">Swimmer name</label>
-          <input type="text" class="form-control" id="sName" name="sName">
+        <label for="sid" class="form-label">Swimmer</label>
+<?php
+$swimmerList = selectSwimmersForInput();
+include "view-swimmer-input-list.php"
+?>
         </div>
         <div class="mb-3">
           <label for="sAge" class="form-label">Swimmer age</label>
