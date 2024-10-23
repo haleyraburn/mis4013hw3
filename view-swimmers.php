@@ -46,7 +46,7 @@ while ($swimmer = $swimmers->fetch_assoc()) {
     <td>
       <form method="post" action="meets-by-swimmer.php">
         <input type="hidden" name="sid" value=<?php echo $swimmer['swimmer_id']; ?>'>
-        <button type="submit class="btn btn-primary">Swimmers</button>
+        <button type="submit class="btn btn-primary">Events</button>
       </form>
     </td>
   </tr>
