@@ -21,11 +21,11 @@
             </div>
             <div class="mb-3">
               <label for="mLocation<?php echo $meet['meet_id']; ?>" class="form-label">Meet location</label>
-              <input type="text" class="form-control" id="mLocation<?php echo $meet['meet_id']; ?>" name="mLocation" value="<?php echo $meet['meet_location']; ?>>
+              <input type="text" class="form-control" id="mLocation<?php echo $meet['meet_id']; ?>" name="mLocation" value="<?php echo $meet['meet_location']; ?>">
             </div>
             <div class="mb-3">
               <label for="mDayTime<?php echo $meet['meet_id']; ?>" class="form-label">Meet day and time</label>
-              <input type="text" class="form-control" id="mDayTime<?php echo $meet['meet_id']; ?>" name="mDayTime" value="<?php echo $meet['meet_daytime']; ?>>
+              <input type="text" class="form-control" id="mDayTime<?php echo $meet['meet_id']; ?>" name="mDayTime" value="<?php echo $meet['meet_daytime']; ?>">
             </div>
             <input type="hidden" name="mid" value="<?php echo $meet['meet_id']; ?>>
             <input type="hidden" name="actionType" value="Edit">
