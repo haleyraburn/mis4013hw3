@@ -27,6 +27,20 @@ function insertSwimmer($sName, $sAge, $sGender) {
     }
 }
 
+function updateSwimmer($sName, $sAge, $sGender, $sid) {
+    try {
+        $conn = get_db_connection();
+        $stmt = $conn->prepare("update swimmer set swimmer_name  = ?, swimmer_age = ?, swimmer_gender = ? where swimmer_id = ?");
+        $stmt->bind_param("sssi", $sName, $sAge, $sGender, $sid);
+        $success = $stmt->execute();
+        $conn->close();
+        return $success;
+    } catch (Exception $e) {
+        $conn->close();
+        throw $e;
+    }
+}
+
 
 function deleteSwimmer($sid) {
     try {
