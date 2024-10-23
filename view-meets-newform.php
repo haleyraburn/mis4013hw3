@@ -26,6 +26,7 @@
               <label for="mDayTime" class="form-label">Meet day and time</label>
               <input type="text" class="form-control" id="mDayTime" name="mDayTime">
             </div>
+            <input type="hidden" name="actionType" value="Add">
             <button type="submit" class="btn btn-primary">Save</button>
         </form>
       </div>
