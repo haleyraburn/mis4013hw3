@@ -16,7 +16,7 @@ function selectSwimmers() {
 function insertSwimmer($sName, $sAge, $sGender) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("INSERT INTO 'swimmer' ('swimmer_name', 'swimmer_age', 'swimmer_gender') VALUES (?, ?, ?)");
+        $stmt = $conn->prepare("INSERT INTO swimmer (swimmer_name, swimmer_age, swimmer_gender) VALUES (?, ?, ?)");
         $stmt->bind_param("sss", $sName, $sAge, $sGender);
         $success = $stmt->execute();
         $conn->close();
