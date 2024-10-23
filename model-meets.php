@@ -17,7 +17,7 @@ function insertMeet($mName, $mLocation, $mDayTime) {
   try {
     $conn = get_db_connection();
   $stmt = $conn->prepare("INSERT INTO `meet` (`meet_name`, `meet_location`, `meet_daytime`) VALUES (?, ?, ?)");
-  $stmt->bind_param("ss", $mName, $mLocation, $mDayTime);
+  $stmt->bind_param("sss", $mName, $mLocation, $mDayTime);
   $success = $stmt->execute();
   $conn->close();
   return $success;
